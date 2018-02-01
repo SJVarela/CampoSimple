@@ -1,7 +1,6 @@
 ﻿using DataAccess.Connection;
 using DataAccess.Schemas;
 using Security.Encription;
-using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -58,11 +57,28 @@ namespace DataAccess.TableGateways
         }
         public void Delete(long id)
         {
-            throw new NotImplementedException();
+            using (var connection = SQLDbConnection.GetConnection())
+            {
+                var command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = $"DELETE FROM {DbSchema.Usuarios.Table} WHERE {DbSchema.Usuarios.Id} = @id";
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.ExecuteNonQuery();
+            }
         }
-        public void Update(long id, string nombre)
+        public void Update(long id, string name, string password)
         {
-            throw new NotImplementedException();
+            string hashedPassword = SecurePasswordHasher.Hash(password);
+            using (var connection = SQLDbConnection.GetConnection())
+            {
+                var command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = $"UPDATE {DbSchema.Usuarios.Table} SET {DbSchema.Usuarios.Name} = @name, {DbSchema.Usuarios.Password} = @password WHERE {DbSchema.Usuarios.Id} = @id";
+                command.Parameters.Add(new SqlParameter("@name", name));
+                command.Parameters.Add(new SqlParameter("@password", hashedPassword));
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.ExecuteNonQuery();
+            }
         }
 
     }
