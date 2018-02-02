@@ -2,6 +2,6 @@
 {
     public class DbSchema
     {
-        public static UserTableSchema Usuarios { get; set; } = new UserTableSchema();
+        public static UserTableSchema Users { get; set; } = new UserTableSchema();
     }
 }

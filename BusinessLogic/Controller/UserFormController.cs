@@ -21,7 +21,7 @@ namespace BusinessLogic.Controller
             {
                 while (reader.Read())
                 {
-                    result.Add(new User() { Id = (long)reader[DbSchema.Usuarios.Id], Name = (string)reader[DbSchema.Usuarios.Name], Password = (string)reader[DbSchema.Usuarios.Password] });
+                    result.Add(new User() { Id = (long)reader[DbSchema.Users.Id], Name = (string)reader[DbSchema.Users.Name], Password = (string)reader[DbSchema.Users.Password] });
                 }
             }
             return result;
