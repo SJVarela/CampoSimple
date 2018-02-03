@@ -10,21 +10,11 @@ namespace BusinessLogic.Controller
     {
         public void AddUser(User user)
         {
-            var gateway = new UserGateway();
-            gateway.Insert(user.Name, user.Password);
+            throw new NotImplementedException();
         }
         public List<User> GetUsers()
         {
-            var result = new List<User>();
-            var gateway = new UserGateway();
-            using (var reader = gateway.GetAll())
-            {
-                while (reader.Read())
-                {
-                    result.Add(new User() { Id = (long)reader[DbSchema.Users.Id], Name = (string)reader[DbSchema.Users.Name], Password = (string)reader[DbSchema.Users.Password] });
-                }
-            }
-            return result;
+            throw new NotImplementedException();
         }
         public User GetUser(long id)
         {

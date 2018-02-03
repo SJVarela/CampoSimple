@@ -1,9 +1,4 @@
 ﻿using DataAccess.DataModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Models
 {
@@ -22,6 +17,7 @@ namespace BusinessLogic.Models
         public long Id
         {
             get { return data.Id; }
+            set { data.Id = value; }
         }
         public string Username
         {
