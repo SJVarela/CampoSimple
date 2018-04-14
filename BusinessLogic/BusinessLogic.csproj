@@ -49,6 +49,10 @@
       <Project>{9637074f-0e86-479e-9ef9-b4e0fcf407c7}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Project>{dee0bf74-8785-48e4-bd74-a810525b0c9c}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
