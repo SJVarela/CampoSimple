@@ -1,6 +1,6 @@
 ﻿namespace UserInterface
 {
-    partial class Form1
+    partial class LogInForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,53 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.emailTextbox1 = new UserInterface.Controls.EmailTextbox();
-            this.emailTextBox11 = new UserInterface.Controls.EmailTextBox1(errorProvider1);
-
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.SuspendLayout();
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // emailTextBox11
-            // 
-            this.emailTextBox11.Location = new System.Drawing.Point(13, 40);
-            this.emailTextBox11.Name = "emailTextBox11";
-            this.emailTextBox11.Size = new System.Drawing.Size(100, 20);
-            this.emailTextBox11.TabIndex = 1;
-            // 
-            // emailTextbox1
-            // 
-            this.emailTextbox1.Location = new System.Drawing.Point(13, 13);
-            this.emailTextbox1.Name = "emailTextbox1";
-            this.emailTextbox1.Size = new System.Drawing.Size(100, 20);
-            this.emailTextbox1.TabIndex = 0;
-            // 
-            // Form1
+            // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.emailTextBox11);
-            this.Controls.Add(this.emailTextbox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(314, 177);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "LogInForm";
+            this.Text = "Log In";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Controls.EmailTextbox emailTextbox1;
-        private Controls.EmailTextBox1 emailTextBox11;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

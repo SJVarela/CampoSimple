@@ -1,6 +1,6 @@
 ﻿namespace UserInterface.Controls
 {
-    partial class EmailTextBox1
+    partial class EmailTextBox
     {
         /// <summary>
         /// Required designer variable.

@@ -1,44 +1,16 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace UserInterface.Controls
 {
-    class EmailTextbox : TextBox
+    public partial class EmailTextBox : TextBox
     {
-        private ErrorProvider errorProvider1;
-        private TextBox textBox1;
-        private System.ComponentModel.IContainer components;
-
-        private void InitializeComponent()
+        private ErrorProvider errorProvider;
+        public EmailTextBox(ErrorProvider error)
         {
-            this.components = new System.ComponentModel.Container();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
-            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.ResumeLayout(false);
-
-        }
-
-        private void textBox1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            string errorMsg;
-            if (!IsValidEmail(textBox1.Text, out errorMsg))
-            {
-                e.Cancel = true;
-                textBox1.Select(0, textBox1.Text.Length);
-                this.errorProvider1.SetError(textBox1, errorMsg);
-            }
+            InitializeComponent();
+            errorProvider = error;
         }
         private bool IsValidEmail(string email, out string errorMsg)
         {
@@ -47,7 +19,8 @@ namespace UserInterface.Controls
                 errorMsg = "Email is required";
                 return false;
             }
-            if (!Regex.IsMatch(email, @"/w@/w./w"))
+
+            if (!Regex.IsMatch(email, @"^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"))
             {
                 errorMsg = "Invalid Email";
                 return false;
@@ -55,10 +28,22 @@ namespace UserInterface.Controls
             errorMsg = "";
             return true;
         }
-
-        private void textBox1_Validated(object sender, System.EventArgs e)
+        protected override void OnLostFocus(EventArgs e)
         {
-            errorProvider1.SetError(textBox1, "");
+            string errorMsg;
+            if (!IsValidEmail(this.Text, out errorMsg))
+            {
+                errorProvider.SetError(this, errorMsg);
+            }
+            else
+            {
+                errorProvider.SetError(this, "");
+            }
+            base.OnLostFocus(e);
+        }
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
         }
     }
 }
