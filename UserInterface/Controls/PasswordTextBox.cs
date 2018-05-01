@@ -10,9 +10,6 @@ namespace UserInterface.Controls
             InitializeComponent();
             this.errorProvider = errorProvider;
         }
-
-        private bool 
-
         protected override void OnPaint(PaintEventArgs pe)
         {
             base.OnPaint(pe);
