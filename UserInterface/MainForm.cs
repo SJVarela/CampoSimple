@@ -12,19 +12,21 @@ namespace UserInterface
 {
     public partial class MainForm : Form
     {
-        private int childFormNumber = 0;
-
         public MainForm()
         {
             InitializeComponent();
         }
-
-        private void ShowNewForm(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
+            
+        }
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            var cuartosForm = CuartosForm.Instance();
+            cuartosForm.MdiParent = this;
+            cuartosForm.WindowState = FormWindowState.Maximized;
+            cuartosForm.MinimizeBox = false;
+            cuartosForm.Show();
         }
     }
 }
