@@ -18,7 +18,10 @@ namespace UserInterface
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            
+            var reservasForm = ReservasForm.Instance();
+            reservasForm.MdiParent = this;
+            reservasForm.WindowState = FormWindowState.Maximized;
+            reservasForm.Show();
         }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {

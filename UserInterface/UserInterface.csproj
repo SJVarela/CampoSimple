@@ -52,6 +52,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,20 @@
     <Compile Include="Controls\PasswordTextBox.Designer.cs">
       <DependentUpon>PasswordTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Scheduler\Scheduler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Scheduler\Scheduler.Designer.cs">
+      <DependentUpon>Scheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimeLine\TimeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TimeLine\TimeLine.Designer.cs">
+      <DependentUpon>TimeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimeLine\TimeLineBar.cs" />
+    <Compile Include="Controls\TimeLine\TimeLineHeader.cs" />
     <Compile Include="CuartosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +110,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserva.cs" />
+    <Compile Include="ReservasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservasForm.Designer.cs">
+      <DependentUpon>ReservasForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\EmailTextBox.resx">
       <DependentUpon>EmailTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReservasForm.resx">
+      <DependentUpon>ReservasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -145,5 +170,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
