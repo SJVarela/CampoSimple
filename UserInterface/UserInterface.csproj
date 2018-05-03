@@ -89,7 +89,9 @@
       <DependentUpon>TimeLine.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TimeLine\TimeLineBar.cs" />
-    <Compile Include="Controls\TimeLine\TimeLineHeader.cs" />
+    <Compile Include="Controls\TimeLine\TimeLineColumn.cs" />
+    <Compile Include="Controls\TimeLine\TimeLineGrid.cs" />
+    <Compile Include="Controls\TimeLine\TimeLineRow.cs" />
     <Compile Include="CuartosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +172,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Source\Repos\ganttchart\GanttChart\GanttChart.csproj">
+      <Project>{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}</Project>
+      <Name>GanttChart</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

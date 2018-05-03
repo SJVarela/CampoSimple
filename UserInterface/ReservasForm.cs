@@ -1,15 +1,25 @@
-﻿using System;
+﻿using Braincase.GanttChart;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
-using UserInterface.Controls.Scheduler;
+using UserInterface.Controls.TimeLine;
 
 namespace UserInterface
 {
     public partial class ReservasForm : Form
     {
-        private Scheduler calendar;
+        private ProjectManager manager;
         protected ReservasForm()
         {
             InitializeComponent();
+            manager = new ProjectManager();
+            manager.Start = DateTime.Today;
+            var task = new Task() { Name = "name1" };
+            manager.Add(task);
+            manager.SetStart(task, TimeSpan.FromDays(4));
+            manager.SetDuration(task, TimeSpan.FromDays(6));
+
+            Schedualer.Init(manager);
         }
         private static ReservasForm form;
         public static ReservasForm Instance()
@@ -23,9 +33,6 @@ namespace UserInterface
 
         private void ReservasForm_Load(object sender, System.EventArgs e)
         {
-            calendar = new Scheduler() { StartDate = DateTime.Now, EndDate = DateTime.Now.AddDays(20) };
-            calendar.Dock = DockStyle.Fill;
-            this.Controls.Add(calendar);
         }
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{83D80C58-4ED2-49F9-AC4E-17E4B42F800E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GanttChart", "..\..\..\..\Source\Repos\ganttchart\GanttChart\GanttChart.csproj", "{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{83D80C58-4ED2-49F9-AC4E-17E4B42F800E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83D80C58-4ED2-49F9-AC4E-17E4B42F800E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83D80C58-4ED2-49F9-AC4E-17E4B42F800E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,83 +7,72 @@ namespace UserInterface.Controls.TimeLine
 {
     public partial class TimeLine : UserControl
     {
-        private Bitmap bmp;
-        private Graphics graphics;
-
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
-        public TimeLineHeader Header { get; set; }
+        public TimeLineGrid Grid { get; set; }
         public List<TimeLineBar> Bars = new List<TimeLineBar>();
 
-        private int chartSpan;
-        private int gridWidth;
-        private int headerHeight;
 
         public TimeLine(DateTime startDate, DateTime endDate)
         {
             InitializeComponent();
-
-            bmp = new Bitmap(1280, 1024);
-            graphics = Graphics.FromImage(bmp);
             SetStyle(ControlStyles.DoubleBuffer | ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);
-
             StartDate = startDate;
             EndDate = endDate;
 
+            Grid = new TimeLineGrid(StartDate, EndDate);
+            Grid.Rows.Add(new TimeLineRow("Room 1"));
+            Grid.Rows.Add(new TimeLineRow("Room 1"));
+            Grid.Rows.Add(new TimeLineRow("Room 1"));
+            Grid.Rows.Add(new TimeLineRow("Room 1"));
         }
 
         public void AddBar(TimeLineBar bar)
         {
-            TimeSpan span = bar.StartDate - bar.EndDate;
             Bars.Add(bar);
         }
 
         private void PaintChart(Graphics gfx)
         {
-            chartSpan = (EndDate - StartDate).Days;
-            gridWidth = Width / chartSpan;
-            DrawHeader(gfx);
-            DrawBars(gfx);
-            DrawVerticalGrid(gfx);
+            DrawGrid(gfx);
         }
         private void DrawBars(Graphics gfx)
         {
-            foreach (TimeLineBar bar in Bars)
-            {
-                int startLocation = (bar.StartDate - StartDate).Days * gridWidth;
-                int width = (bar.EndDate - bar.StartDate).Days * gridWidth;
-                Rectangle barRectangle = new Rectangle(startLocation, headerHeight, width, 10);
-                gfx.DrawRectangle(Pens.Black, barRectangle);
-            }
         }
 
-        private void DrawHeader(Graphics gfx)
+        private void DrawGrid(Graphics gfx)
         {
-            for (int i = 0; i <= chartSpan; i++)
+            int i = 0;
+            SizeF headerSize = gfx.MeasureString("dd/MM/yy", Font); //TODO: Mejorar
+            foreach (TimeLineColumn column in Grid.Columns)
             {
-                gfx.DrawString(StartDate.AddDays(i).ToString("d-MMM"), new Font("Arial", 8, FontStyle.Regular), Brushes.Black, (i * gridWidth)+gridWidth/2, 0);
+                column.Position = headerSize.Width * i;
+                gfx.DrawString(column.Header, Font, Brushes.Black, column.Position, 0);
+                gfx.DrawLine(Grid.LineStyle, column.Position, 0, column.Position, Height);
+                i++;
             }
-            headerHeight = 8;
-        }
-
-        private void DrawVerticalGrid(Graphics gfx)
-        {
-            for(int i = 0; i < chartSpan; i++)
+            i = 0;
+            foreach (TimeLineRow row in Grid.Rows)
             {
-                gfx.DrawLine(Pens.Bisque, i * gridWidth, 0, i * gridWidth, Height);
+                row.Height = headerSize.Height;
+                row.Position = headerSize.Height + row.Height * i;
+                gfx.DrawString(row.Header, Font, Brushes.Black, 0, row.Position);
+                gfx.DrawLine(Grid.LineStyle, 0, row.Position, Width, row.Position);
+                i++;
             }
 
         }
 
         protected override void OnResize(EventArgs e)
         {
-            base.OnResize(e);
+            Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             PaintChart(e.Graphics);
         }
+
     }
 }
