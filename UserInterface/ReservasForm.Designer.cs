@@ -48,9 +48,11 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Schedualer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReservasForm";
+            this.ShowIcon = false;
             this.Text = "ReservasForm";
             this.Load += new System.EventHandler(this.ReservasForm_Load);
             this.ResumeLayout(false);

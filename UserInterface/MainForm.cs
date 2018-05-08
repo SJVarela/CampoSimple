@@ -15,14 +15,24 @@ namespace UserInterface
             reservasForm.MdiParent = this;
             reservasForm.WindowState = FormWindowState.Maximized;
             reservasForm.Show();
+
         }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             var cuartosForm = CuartosForm.Instance();
             cuartosForm.MdiParent = this;
             cuartosForm.WindowState = FormWindowState.Maximized;
-            cuartosForm.MinimizeBox = false;
             cuartosForm.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
