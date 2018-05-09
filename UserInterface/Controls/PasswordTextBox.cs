@@ -4,15 +4,9 @@ namespace UserInterface.Controls
 {
     public partial class PasswordTextBox : TextBox
     {
-        private ErrorProvider errorProvider;
-        public PasswordTextBox(ErrorProvider errorProvider)
+        public PasswordTextBox()
         {
             InitializeComponent();
-            this.errorProvider = errorProvider;
-        }
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            base.OnPaint(pe);
         }
     }
 }

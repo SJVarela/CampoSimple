@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,44 +6,32 @@ namespace UserInterface.Controls
 {
     public partial class EmailTextBox : TextBox
     {
-        private ErrorProvider errorProvider;
-        public EmailTextBox(ErrorProvider error)
+        public ErrorProvider ErrorProvider { get; set; } = new ErrorProvider();
+
+        public EmailTextBox()
         {
             InitializeComponent();
-            errorProvider = error;
         }
-        private bool IsValidEmail(string email, out string errorMsg)
+        protected override void OnValidating(CancelEventArgs e)
         {
-            if (email.Length == 0)
+            base.OnValidating(e);
+            if (Text.Length == 0)
             {
-                errorMsg = "Email is required";
-                return false;
+                e.Cancel = true;
+                ErrorProvider.SetError(this, "Email is required");
             }
+            else if (!Regex.IsMatch(Text, @"^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"))
+            {
+                e.Cancel = true;
+                ErrorProvider.SetError(this, "Invalid Email");
 
-            if (!Regex.IsMatch(email, @"^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"))
-            {
-                errorMsg = "Invalid Email";
-                return false;
-            }
-            errorMsg = "";
-            return true;
-        }
-        protected override void OnLostFocus(EventArgs e)
-        {
-            string errorMsg;
-            if (!IsValidEmail(this.Text, out errorMsg))
-            {
-                errorProvider.SetError(this, errorMsg);
             }
             else
             {
-                errorProvider.SetError(this, "");
+                e.Cancel = false;
+                ErrorProvider.SetError(this, "");
             }
-            base.OnLostFocus(e);
         }
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            base.OnPaint(pe);
-        }
+
     }
 }
