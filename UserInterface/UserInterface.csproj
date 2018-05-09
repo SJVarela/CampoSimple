@@ -173,8 +173,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Source\Repos\ganttchart\GanttChart\GanttChart.csproj">
-      <Project>{F98F97D5-4F29-4531-AD05-D90F8E84C9AA}</Project>
+    <ProjectReference Include="..\GanttChart\GanttChart.csproj">
+      <Project>{f98f97d5-4f29-4531-ad05-d90f8e84c9aa}</Project>
       <Name>GanttChart</Name>
     </ProjectReference>
   </ItemGroup>
