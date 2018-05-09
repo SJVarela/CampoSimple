@@ -76,22 +76,6 @@
     <Compile Include="Controls\PasswordTextBox.Designer.cs">
       <DependentUpon>PasswordTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Scheduler\Scheduler.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Controls\Scheduler\Scheduler.Designer.cs">
-      <DependentUpon>Scheduler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\TimeLine\TimeLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\TimeLine\TimeLine.Designer.cs">
-      <DependentUpon>TimeLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\TimeLine\TimeLineBar.cs" />
-    <Compile Include="Controls\TimeLine\TimeLineColumn.cs" />
-    <Compile Include="Controls\TimeLine\TimeLineGrid.cs" />
-    <Compile Include="Controls\TimeLine\TimeLineRow.cs" />
     <Compile Include="CuartosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,12 +155,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GanttChart\GanttChart.csproj">
-      <Project>{f98f97d5-4f29-4531-ad05-d90f8e84c9aa}</Project>
-      <Name>GanttChart</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

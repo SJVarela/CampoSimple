@@ -29,17 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Schedualer = new Braincase.GanttChart.Chart();
             this.SuspendLayout();
-            // 
-            // Schedualer
-            // 
-            this.Schedualer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Schedualer.Location = new System.Drawing.Point(0, 0);
-            this.Schedualer.Margin = new System.Windows.Forms.Padding(0);
-            this.Schedualer.Name = "Schedualer";
-            this.Schedualer.Size = new System.Drawing.Size(800, 450);
-            this.Schedualer.TabIndex = 0;
             // 
             // ReservasForm
             // 
@@ -47,7 +37,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Schedualer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -56,11 +45,8 @@
             this.Text = "ReservasForm";
             this.Load += new System.EventHandler(this.ReservasForm_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion
-
-        private Braincase.GanttChart.Chart Schedualer;
     }
 }
