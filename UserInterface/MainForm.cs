@@ -11,6 +11,8 @@ namespace UserInterface
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             var reservasForm = ReservasForm.Instance();
             reservasForm.MdiParent = this;
             reservasForm.WindowState = FormWindowState.Maximized;
@@ -19,6 +21,8 @@ namespace UserInterface
         }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             var cuartosForm = CuartosForm.Instance();
             cuartosForm.MdiParent = this;
             cuartosForm.WindowState = FormWindowState.Maximized;

@@ -16,7 +16,7 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(ReservasForm.Instance());
+            Application.Run(new MainForm());
         }
     }
 }

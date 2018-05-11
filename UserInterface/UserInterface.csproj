@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EmailTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="CuartosForm.Designer.cs">
       <DependentUpon>CuartosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HabitacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HabitacionForm.Designer.cs">
+      <DependentUpon>HabitacionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
@@ -103,11 +115,17 @@
     <Compile Include="ReservasForm.Designer.cs">
       <DependentUpon>ReservasForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmailTextBox.resx">
       <DependentUpon>EmailTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuartosForm.resx">
       <DependentUpon>CuartosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HabitacionForm.resx">
+      <DependentUpon>HabitacionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
