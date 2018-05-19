@@ -64,10 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteForm.cs">
+    <Compile Include="Forms\ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteForm.Designer.cs">
+    <Compile Include="Forms\ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\EmailTextBox.cs">
@@ -82,55 +82,54 @@
     <Compile Include="Controls\PasswordTextBox.Designer.cs">
       <DependentUpon>PasswordTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CuartosForm.cs">
+    <Compile Include="Forms\CuartosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CuartosForm.Designer.cs">
+    <Compile Include="Forms\CuartosForm.Designer.cs">
       <DependentUpon>CuartosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HabitacionForm.cs">
+    <Compile Include="Forms\HabitacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HabitacionForm.Designer.cs">
+    <Compile Include="Forms\HabitacionForm.Designer.cs">
       <DependentUpon>HabitacionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogInForm.cs">
+    <Compile Include="Forms\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogInForm.Designer.cs">
+    <Compile Include="Forms\LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reserva.cs" />
-    <Compile Include="ReservasForm.cs">
+    <Compile Include="Forms\ReservasForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservasForm.Designer.cs">
+    <Compile Include="Forms\ReservasForm.Designer.cs">
       <DependentUpon>ReservasForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClienteForm.resx">
+    <EmbeddedResource Include="Forms\ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmailTextBox.resx">
       <DependentUpon>EmailTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CuartosForm.resx">
+    <EmbeddedResource Include="Forms\CuartosForm.resx">
       <DependentUpon>CuartosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HabitacionForm.resx">
+    <EmbeddedResource Include="Forms\HabitacionForm.resx">
       <DependentUpon>HabitacionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogInForm.resx">
+    <EmbeddedResource Include="Forms\LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -142,7 +141,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReservasForm.resx">
+    <EmbeddedResource Include="Forms\ReservasForm.resx">
       <DependentUpon>ReservasForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -180,5 +179,6 @@
       <Name>BusinessLogic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

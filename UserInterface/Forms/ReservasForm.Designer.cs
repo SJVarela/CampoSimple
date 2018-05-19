@@ -1,4 +1,4 @@
-﻿namespace UserInterface
+﻿namespace UserInterface.Forms
 {
     partial class ReservasForm
     {

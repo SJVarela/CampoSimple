@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace UserInterface
+namespace UserInterface.Forms
 {
     public partial class MainForm : Form
     {

@@ -1,12 +1,8 @@
 ﻿using BusinessLogic.Models;
-using System.ComponentModel;
-using System.Windows.Forms;
-using System.Linq;
-using System.Data;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Windows.Forms;
 
-namespace UserInterface
+namespace UserInterface.Forms
 {
     public partial class ReservasForm : Form
     {
