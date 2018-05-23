@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\BackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BackupForm.Designer.cs">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BitacoraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="Forms\ReservasForm.Designer.cs">
       <DependentUpon>ReservasForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\BackupForm.resx">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BitacoraForm.resx">
       <DependentUpon>BitacoraForm.cs</DependentUpon>
     </EmbeddedResource>
