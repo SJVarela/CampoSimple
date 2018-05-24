@@ -11,6 +11,7 @@
         BajaFamilia,
         ConsultarBitacora,
         RealizarBackup,
+        RestaurarCopia,
         AltaUsuario
     }
 }
