@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Authorization\AuthAttribute.cs" />
     <Compile Include="Authorization\AuthorizationHandler.cs" />
+    <Compile Include="Authorization\Patente.cs" />
     <Compile Include="Encription\SecurePasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
