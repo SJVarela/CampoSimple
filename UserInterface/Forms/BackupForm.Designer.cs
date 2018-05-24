@@ -77,7 +77,7 @@
             this.groupBox1.Controls.Add(this.btnQuitarDest);
             this.groupBox1.Controls.Add(this.lstDestinos);
             this.groupBox1.Controls.Add(this.btnAgregarDest);
-            this.groupBox1.Location = new System.Drawing.Point(9, 25);
+            this.groupBox1.Location = new System.Drawing.Point(12, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(221, 238);
             this.groupBox1.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             // btnCrearBackup
             // 
-            this.btnCrearBackup.Location = new System.Drawing.Point(83, 269);
+            this.btnCrearBackup.Location = new System.Drawing.Point(86, 276);
             this.btnCrearBackup.Name = "btnCrearBackup";
             this.btnCrearBackup.Size = new System.Drawing.Size(75, 42);
             this.btnCrearBackup.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 323);
+            this.ClientSize = new System.Drawing.Size(246, 335);
             this.Controls.Add(this.btnCrearBackup);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
