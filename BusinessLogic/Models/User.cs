@@ -19,7 +19,7 @@ namespace BusinessLogic.Models
             get { return Data.Id; }
             set { Data.Id = value; }
         }
-        public string Username
+        public string Alias
         {
             get { return Data.Alias; }
             set { Data.Alias = value; }
@@ -29,12 +29,12 @@ namespace BusinessLogic.Models
             get { return Data.Password; }
             set { Data.Password = value; }
         }
-        public string Name
+        public string Nombre
         {
             get { return Data.Nombre; }
             set { Data.Nombre = value; }
         }
-        public string LastName
+        public string Apellido
         {
             get { return Data.Apellido; }
             set { Data.Apellido = value; }
