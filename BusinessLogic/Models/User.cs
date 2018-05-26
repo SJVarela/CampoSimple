@@ -4,55 +4,45 @@ namespace BusinessLogic.Models
 {
     public class User
     {
-        private UserDO data;
         public User()
         {
-            data = new UserDO();
+            Data = new UserDO();
         }
         public User(UserDO data)
         {
-            this.data = data;
+            this.Data = data;
         }
 
+        public UserDO Data { get; }
         public long Id
         {
-            get { return data.Id; }
-            set { data.Id = value; }
+            get { return Data.Id; }
+            set { Data.Id = value; }
         }
         public string Username
         {
-            get { return data.Username; }
-            set { data.Username = value; }
+            get { return Data.Alias; }
+            set { Data.Alias = value; }
         }
         public string Password
         {
-            get { return data.Password; }
-            set { data.Password = value; }
+            get { return Data.Password; }
+            set { Data.Password = value; }
         }
         public string Name
         {
-            get { return data.Name; }
-            set { data.Name = value; }
+            get { return Data.Nombre; }
+            set { Data.Nombre = value; }
         }
         public string LastName
         {
-            get { return data.LastName; }
-            set { data.LastName = value; }
-        }
-        public string PhoneNo
-        {
-            get { return data.PhoneNo; }
-            set { data.PhoneNo = value; }
-        }
-        public string Adress
-        {
-            get { return data.Adress; }
-            set { data.Adress = value; }
+            get { return Data.Apellido; }
+            set { Data.Apellido = value; }
         }
         public string Email
         {
-            get { return data.Email; }
-            set { data.Email = value; }
+            get { return Data.Email; }
+            set { Data.Email = value; }
         }
     }
 }
