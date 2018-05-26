@@ -29,63 +29,64 @@
         private void InitializeComponent()
         {
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tboxAlias = new System.Windows.Forms.TextBox();
+            this.tboxPassword = new System.Windows.Forms.TextBox();
+            this.tboxNombre = new System.Windows.Forms.TextBox();
+            this.tboxApellido = new System.Windows.Forms.TextBox();
+            this.tboxEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tboxRepPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(114, 171);
+            this.btnGuardar.Location = new System.Drawing.Point(92, 171);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 38);
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // textBox1
+            // tboxAlias
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tboxAlias.Location = new System.Drawing.Point(114, 12);
+            this.tboxAlias.Name = "tboxAlias";
+            this.tboxAlias.Size = new System.Drawing.Size(100, 20);
+            this.tboxAlias.TabIndex = 1;
             // 
-            // textBox2
+            // tboxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.tboxPassword.Location = new System.Drawing.Point(114, 39);
+            this.tboxPassword.Name = "tboxPassword";
+            this.tboxPassword.Size = new System.Drawing.Size(100, 20);
+            this.tboxPassword.TabIndex = 2;
             // 
-            // textBox3
+            // tboxNombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.tboxNombre.Location = new System.Drawing.Point(114, 92);
+            this.tboxNombre.Name = "tboxNombre";
+            this.tboxNombre.Size = new System.Drawing.Size(100, 20);
+            this.tboxNombre.TabIndex = 3;
             // 
-            // textBox4
+            // tboxApellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(114, 118);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.tboxApellido.Location = new System.Drawing.Point(114, 118);
+            this.tboxApellido.Name = "tboxApellido";
+            this.tboxApellido.Size = new System.Drawing.Size(100, 20);
+            this.tboxApellido.TabIndex = 4;
             // 
-            // textBox5
+            // tboxEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(114, 145);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 5;
+            this.tboxEmail.Location = new System.Drawing.Point(114, 145);
+            this.tboxEmail.Name = "tboxEmail";
+            this.tboxEmail.Size = new System.Drawing.Size(100, 20);
+            this.tboxEmail.TabIndex = 5;
             // 
             // label1
             // 
@@ -132,12 +133,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Email";
             // 
-            // textBox6
+            // tboxRepPassword
             // 
-            this.textBox6.Location = new System.Drawing.Point(114, 66);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 11;
+            this.tboxRepPassword.Location = new System.Drawing.Point(114, 66);
+            this.tboxRepPassword.Name = "tboxRepPassword";
+            this.tboxRepPassword.Size = new System.Drawing.Size(100, 20);
+            this.tboxRepPassword.TabIndex = 11;
             // 
             // label6
             // 
@@ -154,17 +155,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 234);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tboxRepPassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tboxEmail);
+            this.Controls.Add(this.tboxApellido);
+            this.Controls.Add(this.tboxNombre);
+            this.Controls.Add(this.tboxPassword);
+            this.Controls.Add(this.tboxAlias);
             this.Controls.Add(this.btnGuardar);
             this.Name = "UsuarioForm";
             this.Text = "UsuarioForm";
@@ -176,17 +177,17 @@
         #endregion
 
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tboxAlias;
+        private System.Windows.Forms.TextBox tboxPassword;
+        private System.Windows.Forms.TextBox tboxNombre;
+        private System.Windows.Forms.TextBox tboxApellido;
+        private System.Windows.Forms.TextBox tboxEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tboxRepPassword;
         private System.Windows.Forms.Label label6;
     }
 }

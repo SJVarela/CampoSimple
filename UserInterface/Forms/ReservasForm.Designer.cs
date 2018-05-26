@@ -164,7 +164,6 @@
             this.Name = "ReservasForm";
             this.ShowIcon = false;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.ReservasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

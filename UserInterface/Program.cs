@@ -14,7 +14,7 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BackupForm());
+            Application.Run(new UsuarioForm());
         }
     }
 }
