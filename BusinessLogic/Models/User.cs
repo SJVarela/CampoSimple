@@ -1,4 +1,6 @@
 ﻿using DataAccess.DataModel;
+using Security.Authorization;
+using System.Collections.Generic;
 
 namespace BusinessLogic.Models
 {
@@ -44,5 +46,7 @@ namespace BusinessLogic.Models
             get { return Data.Email; }
             set { Data.Email = value; }
         }
+
+        public List<Patente> Patentes { get; set; } = new List<Patente>();
     }
 }

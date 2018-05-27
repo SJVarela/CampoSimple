@@ -2,6 +2,7 @@
 {
     public enum Patente
     {
+        Ninguna,
         AsignarPatente,
         DesasignarPatente,
         AltaFamilia,

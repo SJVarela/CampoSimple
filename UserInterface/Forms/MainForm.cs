@@ -1,10 +1,14 @@
-﻿using System;
+﻿using BusinessLogic.Models;
+using Security.Authorization;
+using System;
 using System.Windows.Forms;
 
 namespace UserInterface.Forms
 {
     public partial class MainForm : Form
     {
+        private User currentUser = new User();
+        private AuthorizationHandler auth = new AuthorizationHandler();
         public MainForm()
         {
             InitializeComponent();
@@ -37,6 +41,17 @@ namespace UserInterface.Forms
         private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            currentUser.Patentes.Add(Patente.AsignarPatente);
+            auth.Autorizar(this, currentUser.Patentes);
         }
     }
 }

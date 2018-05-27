@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\SecureTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SecureTextBox.Designer.cs">
+      <DependentUpon>SecureTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BackupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,10 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <Project>{e7d9d763-2a83-420f-a04b-a027a797019a}</Project>
       <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Project>{DEE0BF74-8785-48E4-BD74-A810525B0C9C}</Project>
+      <Name>Security</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

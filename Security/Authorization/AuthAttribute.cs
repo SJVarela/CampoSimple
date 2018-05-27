@@ -2,8 +2,13 @@
 
 namespace Security.Authorization
 {
+    [AttributeUsage(AttributeTargets.Field)]
     public class AuthAttribute : Attribute
     {
-        public string NombreActividad { get; set; }
+        public AuthAttribute(Patente patente)
+        {
+            Patente = patente;
+        }
+        public Patente Patente { get; }
     }
 }
