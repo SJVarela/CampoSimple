@@ -47,7 +47,7 @@ namespace DataAccess.TableGateways
         }
         public void Insert(UserDO user)
         {
-            string hashedPassword = SecurePasswordHasher.Hash(user.Password);
+            string hashedPassword = EncriptadorIrreversible.EncriptarIrreversible(user.Password);
             using (var connection = SQLDbConnection.GetConnection())
             {
                 var command = connection.CreateCommand();
@@ -75,7 +75,7 @@ namespace DataAccess.TableGateways
         }
         public void Update(UserDO user)
         {
-            string hashedPassword = SecurePasswordHasher.Hash(user.Password);
+            string hashedPassword = EncriptadorIrreversible.EncriptarIrreversible(user.Password);
             using (var connection = SQLDbConnection.GetConnection())
             {
                 var command = connection.CreateCommand();

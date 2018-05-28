@@ -3,12 +3,12 @@ using System.Security.Cryptography;
 
 namespace Security.Encription
 {
-    public class SecurePasswordHasher
+    public class EncriptadorIrreversible
     {
         //Iteraciones para la funcion del hasheo (mas grande, mas seguridad pero menos performance)
         private const int iterations = 1000;
 
-        static public string Hash(string data)
+        static public string EncriptarIrreversible(string data)
         {
             //Salt es un numero random que se usa para hashear la contraseña, un "condimento"
             byte[] salt = new byte[16];

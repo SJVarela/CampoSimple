@@ -41,12 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authorization\AuthAttribute.cs" />
+    <Compile Include="Autenticacion\Autenticador.cs" />
     <Compile Include="Authorization\AuthorizationHandler.cs" />
     <Compile Include="Authorization\ISecureControl.cs" />
     <Compile Include="Authorization\Patente.cs" />
-    <Compile Include="Encription\SecurePasswordHasher.cs" />
+    <Compile Include="Backup\BackupHandler.cs" />
+    <Compile Include="Bitacora\BitacoraHandler.cs" />
+    <Compile Include="Bitacora\Criticidad.cs" />
+    <Compile Include="Bitacora\EventoBitacora.cs" />
+    <Compile Include="Encription\EncriptadorIrreversible.cs" />
+    <Compile Include="Encription\EncriptadorReversible.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Verificacion\VerificadorHorizontal.cs" />
+    <Compile Include="Verificacion\VerificadorVertical.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
